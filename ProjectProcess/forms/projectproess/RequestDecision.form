@@ -1,0 +1,82 @@
+{
+    "id": "requestdecision",
+    "schemaVersion": "1.1.0",
+    "name": "RequestDecision",
+    "revision": "1",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "product",
+            "type": "section",
+            "title": "Project",
+            "content": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "label": "Name",
+                    "readOnly": true,
+                    "value": "${context.name}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "region",
+                    "type": "string",
+                    "label": "Region",
+                    "readOnly": true,
+                    "value": "${context.region}",
+                    "constraints": {
+                        "required": false
+                    }
+                },
+                {
+                    "id": "country",
+                    "type": "string",
+                    "label": "Country",
+                    "readOnly": true,
+                    "value": "${context.country}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        },
+        {
+            "id": "comments",
+            "type": "section",
+            "title": "Comments",
+            "content": [
+                {
+                    "id": "your_comments",
+                    "type": "string",
+                    "label": "Your comments",
+                    "readOnly": false,
+                    "value": "${context.response.comments}",
+                    "control": {
+                        "type": "TextArea",
+                        "properties": {
+                            "height": "small"
+                        }
+                    },
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": [
+        {
+            "id": "approve",
+            "text": "Approve",
+            "decisionType": "positive"
+        },
+        {
+            "id": "reject",
+            "text": "Reject",
+            "decisionType": "negative"
+        }
+    ]
+}

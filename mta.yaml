@@ -1,0 +1,16 @@
+_schema-version: "3.2"
+ID: ProjectWorkflow
+version: 0.0.1
+modules:
+  - name: ProjectProcess
+    type: com.sap.application.content
+    path: ProjectProcess
+    requires:
+      - name: workflow_mta
+        parameters:
+          content-target: true
+resources:
+  - name: workflow_mta
+    parameters:
+      service-name: wf
+    type: org.cloudfoundry.existing-service
