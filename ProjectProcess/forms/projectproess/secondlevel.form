@@ -1,0 +1,28 @@
+{
+    "id": "secondlevel",
+    "schemaVersion": "1.1.0",
+    "name": "secondlevel",
+    "revision": "1",
+    "type": "task",
+    "readOnly": false,
+    "content": [
+        {
+            "id": "project",
+            "type": "section",
+            "title": "Project",
+            "content": [
+                {
+                    "id": "name",
+                    "type": "string",
+                    "label": "Name",
+                    "readOnly": true,
+                    "value": "${context.name}",
+                    "constraints": {
+                        "required": false
+                    }
+                }
+            ]
+        }
+    ],
+    "decisions": []
+}
